@@ -1,0 +1,11 @@
+[CentOS]
+name=CentOS $releasever - $basearch
+baseurl=http://mirror.centos.org/centos/6/os/$basearch/
+enabled=1
+gpgcheck=0
+
+[Fedora]
+name=Fedora $releasever - $basearch
+baseurl=http://dl.fedoraproject.org/pub/epel/6/$basearch/
+enabled=1
+gpgcheck=0
