@@ -1,4 +1,4 @@
-![Docker logo](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/Dockerfiles/docker_logo.png)
+![Docker logo](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/docker_logo.png)
 
 # Supported tags and respective `images` links
 

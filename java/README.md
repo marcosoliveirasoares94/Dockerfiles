@@ -1,4 +1,4 @@
-![Docker logo](https://github.com/marcosoliveirasoares94/Docker/blob/master/Dockerfiles/docker_logo.png)
+![Docker logo](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/docker_logo.png)
 
 # Instructions for use
 
@@ -20,4 +20,4 @@ Warning: The `Environment Variables` content of the `java.cfg` file should be ch
 
 # Issues
 
-Please report any issues on [GitHub](https://github.com/marcosoliveirasoares94/Docker/issues).
+Please report any issues on [GitHub](https://github.com/marcosoliveirasoares94/Dockerfiles/issues).

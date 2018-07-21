@@ -23,4 +23,4 @@ Start your image:
 You can add any volume to the container: It can be useful to limit access to a particular section of your server.
 
 # Issues
-Please report any issues on [GitHub](https://github.com/marcosoliveirasoares94/Docker/issues).
+Please report any issues on [GitHub](https://github.com/marcosoliveirasoares94/Dockerfiles/issues).
