@@ -1,17 +1,17 @@
-FROM debian
+FROM ubuntu:18.10
 
 MAINTAINER Marcos Oliveira Soares <marcosoliveirasoares94@gmail.com>
 
-LABEL name = "marcosoliveirasoares94/debian:v1.0" \
-    summary = "Image Debian with OpenSSH-Server and Supervisor." \
-    description = "Image Debian with OpenSSH-Server and Supervisor." \
+LABEL name = "marcosoliveirasoares94/ubuntu" \
+    summary = "Image Ubuntu with OpenSSH-Server and Supervisor." \
+    description = "Image Ubuntu with OpenSSH-Server and Supervisor." \
     ssh-root-user="root" \
     ssh-root-password="secret"
 
 ENV TERM=xterm
 ENV SSH_ROOT_USER=root
 ENV SSH_ROOT_PASSWORD=secret
-ENV DEBIAN_FRONTEND=noninteractive
+ENV UBUNTU_FRONTEND=noninteractive
 
 #
 # BASE image installation.
@@ -22,8 +22,8 @@ RUN apt-get update -y && apt-get install -y \
     sed \
     curl \
     less \
-    sudo \
     nano \
+    sudo \
     net-tools \
     apt-utils \
     supervisor \
@@ -58,21 +58,19 @@ RUN echo "${SSH_ROOT_USER}:${SSH_ROOT_PASSWORD}" | chpasswd && \
     sed -i 's/env_reset/env_reset,pwfeedback/g' /etc/sudoers
 
 #
-# Solving the error of: Too Many Files Open.
-#
-COPY conf/sysctl.conf /etc/sysctl.conf
-COPY conf/limits.conf /etc/security/limits.conf
-COPY conf/90-nproc.conf /etc/security/limits.d/90-nproc.conf
-
-#
 # Copy File supervisord.conf
 #
-COPY conf/supervisord.conf /etc/supervisord.conf
+COPY resources/supervisord.conf /etc/supervisord.conf
 
 #
 # Expose Port.
 #
 EXPOSE 22
+
+#
+# Workdir
+#
+WORKDIR /
 
 #
 # Default command.

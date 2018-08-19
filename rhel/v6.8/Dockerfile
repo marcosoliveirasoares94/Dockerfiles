@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/rhel6/rhel
 
 MAINTAINER Marcos Oliveira Soares <marcosoliveirasoares94@gmail.com>
 
-LABEL name = "marcosoliveirasoares94/rhel:v1" \
+LABEL name = "marcosoliveirasoares94/rhel" \
     summary = "Image RedHat with OpenSSH-Server and Supervisor." \
     description = "Image RedHat with OpenSSH-Server and Supervisor." \
     ssh-root-user="root" \
@@ -16,7 +16,7 @@ ENV REDHAT_FRONTEND=noninteractive
 #
 # CentOS/RHEL 6 x86 64bit:
 #
-COPY conf/centos-6.repo /etc/yum.repos.d/centos-6.repo
+COPY resources/centos-6.repo /etc/yum.repos.d/centos-6.repo
 
 #
 # BASE image installation.
@@ -82,19 +82,17 @@ RUN easy_install --upgrade pip==9.0.1 && \
     rm -rf /var/lib/yum/*
 
 #
-# Solving the error of: Too Many Files Open.
-#
-COPY conf/sysctl.conf /etc/sysctl.conf
-COPY conf/limits.conf /etc/security/limits.conf
-COPY conf/90-nproc.conf /etc/security/limits.d/90-nproc.conf
-
-#
 # Copy File supervisord.conf
 #
-COPY conf/supervisord.conf /etc/supervisord.conf
+COPY resources/supervisord.conf /etc/supervisord.conf
 
 # Expose Port.
 EXPOSE 22
+
+#
+# Workdir
+#
+WORKDIR /
 
 # Default command.
 CMD ["/usr/bin/supervisord"]

@@ -2,4 +2,4 @@
 
 # Supported tags and respective `Dockerfile` links
 
--	[v1.0](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/ubuntu/v1.0)
+-	[v18.10](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/ubuntu/v18.10)

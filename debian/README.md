@@ -2,4 +2,4 @@
 
 # Supported tags and respective `Dockerfile` links
 
--	[v1.0](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/debian/v1.0)
+-	[v8.11](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/debian/v8.11)

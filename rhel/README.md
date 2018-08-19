@@ -2,4 +2,4 @@
 
 # Supported tags and respective `Dockerfile` links
 
--	[v1.0](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/rhel/v1.0)
+-	[v6.8](https://github.com/marcosoliveirasoares94/Dockerfiles/blob/master/rhel/v6.8)
