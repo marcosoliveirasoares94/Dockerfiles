@@ -2,14 +2,14 @@
 Image Ubuntu with OpenSSH-Server and Supervisor installed among other basic software existing in an operating system. Service initialization process management. The list of installed software can be checked in the image file Dockerfile.
 
 # Build
-To create the image `marcosoliveirasoares94/ubuntu:v1.0`, execute the following command on the project folder:
+To create the image `marcosoliveirasoares94/ubuntu:latest`, execute the following command on the project folder:
 
-    docker build -t marcosoliveirasoares94/ubuntu:v1.0 .
+    docker build -t marcosoliveirasoares94/ubuntu:latest .
 
 # Run
 Start your image:
 
-    docker run --name <container-name> --hostname <container-name> -d -P marcosoliveirasoares94/ubuntu:v1.0
+    docker run --name <container-name> --hostname <container-name> -d -P marcosoliveirasoares94/ubuntu:latest
 
 # Variables
 * **TERM** =  xterm
