@@ -7,6 +7,8 @@ LABEL name="marcosoliveirasoares94/ldap" \
      summary="Default image for initializing an LDAP" \
      description="Default image for initializing an LDAP"
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 #
 # BASE image installation.
 #
