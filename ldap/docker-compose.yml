@@ -1,0 +1,24 @@
+version: '2'
+services:
+  ldap:
+    image: marcosoliveirasoares94/ldap:latest
+    container_name: ldap
+    hostname: ldap
+    ulimits:
+      memlock:
+        soft: 1024
+        hard: 1024
+      nofile:
+        soft: 1024
+        hard: 1024
+    ports:
+      - "22"
+      - "389"
+      - "636"
+    environment:
+      - SLAPD_PASSWORD=Passw0rd@123
+      - SLAPD_DOMAIN=ldap.example.com
+      - SLAPD_ORGANIZATION=ldap.example.com
+      - SLAPD_FULL_DOMAIN=dc=ldap,dc=example,dc=com
+      - SLAPD_LDIF_BASE=/var/tmp/ldifs
+      - SLAPD_LOAD_LDIFS=
