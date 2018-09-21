@@ -31,7 +31,7 @@ RUN cd /root && gunzip cracklib-2.9.6.tar.gz && tar -xvf cracklib-2.9.6.tar && \
 	cd cracklib-2.9.6 && ./configure --prefix=/usr --disable-static  --with-default-dict=/lib/cracklib/pw_dict && \
 	make && make install
 
-COPY resources/files_to_install/cracklib-words-2.9.6.gz cracklib-words-2.9.6.gz
+COPY resources/files_to_install/cracklib-words-2.9.6.gz /root/cracklib-words-2.9.6.gz
 RUN install -v -m644 -D /root/cracklib-words-2.9.6.gz /usr/share/dict/cracklib-words.gz && \
 	gunzip -v /usr/share/dict/cracklib-words.gz && \
 	ln -v -sf cracklib-words /usr/share/dict/words && install -v -m755 -d /lib/cracklib &&\
