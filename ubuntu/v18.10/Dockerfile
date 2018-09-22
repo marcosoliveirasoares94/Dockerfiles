@@ -11,7 +11,7 @@ LABEL name = "marcosoliveirasoares94/ubuntu" \
 ENV TERM=xterm
 ENV SSH_ROOT_USER=root
 ENV SSH_ROOT_PASSWORD=secret
-ENV UBUNTU_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 #
 # BASE image installation.
